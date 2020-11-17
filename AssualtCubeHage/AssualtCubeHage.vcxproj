@@ -140,13 +140,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AssualtCubeHage.cpp" />
-    <ClCompile Include="mem.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="draw.cpp" />
+    <ClCompile Include="ent.cpp" />
+    <ClCompile Include="entities.cpp" />
+    <ClCompile Include="mycal.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="proc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mem.h" />
+    <ClInclude Include="draw.h" />
+    <ClInclude Include="ent.h" />
+    <ClInclude Include="entities.h" />
+    <ClInclude Include="mycal.h" />
+    <ClInclude Include="offsets.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="proc.h" />
+    <ClInclude Include="structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

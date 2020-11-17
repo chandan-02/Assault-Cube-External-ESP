@@ -5,38 +5,75 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="proc">
       <UniqueIdentifier>{b320a029-1525-4b6d-8aad-f891b21c551c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="mem">
-      <UniqueIdentifier>{b35e88fc-8231-40ae-8eb0-2057cd8d25a7}</UniqueIdentifier>
+    <Filter Include="offset">
+      <UniqueIdentifier>{4d60b5d6-93b8-4f68-b0f2-fc0d193106e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{38ee641f-06f0-4e07-ab29-26a753d941e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="structs">
+      <UniqueIdentifier>{b982329d-8d15-40d0-afbf-03e8be5b7cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities">
+      <UniqueIdentifier>{965430d9-affd-4d93-89b9-0ef6681e62dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="calculations">
+      <UniqueIdentifier>{3995b742-28a8-4ab3-a243-948a256fb698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="draw">
+      <UniqueIdentifier>{24beb91b-534c-49ee-86ed-d21a3a145b6a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AssualtCubeHage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="proc.cpp">
       <Filter>proc</Filter>
     </ClCompile>
-    <ClCompile Include="mem.cpp">
-      <Filter>mem</Filter>
+    <ClCompile Include="player.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="entities.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="ent.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="mycal.cpp">
+      <Filter>calculations</Filter>
+    </ClCompile>
+    <ClCompile Include="draw.cpp">
+      <Filter>draw</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="proc.h">
       <Filter>proc</Filter>
     </ClInclude>
-    <ClInclude Include="mem.h">
-      <Filter>mem</Filter>
+    <ClInclude Include="player.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="offsets.h">
+      <Filter>offset</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="entities.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="ent.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="mycal.h">
+      <Filter>calculations</Filter>
+    </ClInclude>
+    <ClInclude Include="draw.h">
+      <Filter>draw</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
