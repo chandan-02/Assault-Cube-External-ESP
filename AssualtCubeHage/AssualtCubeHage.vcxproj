@@ -142,7 +142,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="draw.cpp" />
-    <ClCompile Include="ent.cpp" />
     <ClCompile Include="entities.cpp" />
     <ClCompile Include="mycal.cpp" />
     <ClCompile Include="player.cpp" />

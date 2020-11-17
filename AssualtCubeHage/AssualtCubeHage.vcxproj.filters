@@ -37,9 +37,6 @@
     <ClCompile Include="entities.cpp">
       <Filter>entities</Filter>
     </ClCompile>
-    <ClCompile Include="ent.cpp">
-      <Filter>entities</Filter>
-    </ClCompile>
     <ClCompile Include="mycal.cpp">
       <Filter>calculations</Filter>
     </ClCompile>

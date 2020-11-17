@@ -10,6 +10,7 @@ class Player
 {
 	public:
 		char name[20];
+		int base=0;
 		int health=0;
 		float matrix[16];
 		vec3d screen;

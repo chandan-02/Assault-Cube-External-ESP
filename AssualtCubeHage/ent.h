@@ -15,6 +15,4 @@ public:
 	vec3d headPos;
 	vec3d feetPos;
 	int team = 0;
-
-	void printDebug();
 };
