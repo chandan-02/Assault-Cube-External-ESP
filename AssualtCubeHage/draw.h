@@ -10,10 +10,8 @@ class Draw {
 	public:
 		HBRUSH hBrushEnemy = CreateSolidBrush(RGB(255, 20, 20));
 		HBRUSH hBrushTeam = CreateSolidBrush(RGB(20, 20, 255));
-		HBRUSH hBrushNeutral = CreateSolidBrush(RGB(255, 255, 255));
 		COLORREF enemyColor = RGB(255, 20, 20);
 		COLORREF teamColor = RGB(20, 20, 255);
-		COLORREF neutral = RGB(255, 255, 255);
 
 		// Getting handle and target window for ESP.
 		HDC hDesktop;

@@ -10,6 +10,7 @@ class Entity
 public:
 	char name[20];
 	int base = 0;
+	int health = 0 ;
 	float matrix[16];
 	/*vec2d screen;*/
 	vec3d headPos;

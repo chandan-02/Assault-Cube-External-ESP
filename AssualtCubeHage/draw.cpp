@@ -30,9 +30,12 @@ DWORD WINAPI Draw::esp(Entities listOfEnemy, Player me, MyMaths calc) {
 		listOfEnemy.getInfoEntity();
 
 		for (int i = 1; i < listOfEnemy.amount; i++) {
-			if (calc.worldToScreen(listOfEnemy.list[i].feetPos, me.screen, me.matrix,800,600)) {
+			if (calc.worldToScreen(listOfEnemy.list[i].feetPos, me.screen, me.matrix,800,600) && listOfEnemy.list[i].health > 0) {
 				if (listOfEnemy.list[i].team != me.teamC) {
 					Draw::drawEsp(calc.screen.x,calc.screen.y,calc.getDistance3d(me.feetPos,listOfEnemy.list[i].feetPos),Draw::hBrushEnemy, Draw::enemyColor);
+				}
+				if (listOfEnemy.list[i].team == me.teamC) {
+					Draw::drawEsp(calc.screen.x, calc.screen.y, calc.getDistance3d(me.feetPos, listOfEnemy.list[i].feetPos), Draw::hBrushTeam, Draw::teamColor);
 				}
 			}
 		}

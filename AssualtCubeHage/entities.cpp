@@ -30,6 +30,7 @@ void Entities::getInfoEntity() {
 		ReadProcessMemory(hProc, LPCVOID(list[i].base + 0x3C), &list[i].feetPos.z, sizeof(list[i].feetPos.z), nullptr);
 
 		ReadProcessMemory(hProc, LPCVOID(list[i].base + 0x32C), &list[i].team, sizeof(list[i].team), nullptr);
+		ReadProcessMemory(hProc, LPCVOID(list[i].base + 0xF8), &list[i].health, sizeof(list[i].health), nullptr);
 	}
 	
 }
