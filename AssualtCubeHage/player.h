@@ -17,6 +17,8 @@ class Player
 		vec3d headPos;
 		vec3d feetPos;
 		int teamC=0;
+		int height = 0;
+		int width = 0;
 
 		void getInfoPlayer();
 		void printDebug();

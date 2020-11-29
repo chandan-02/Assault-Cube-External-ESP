@@ -6,6 +6,8 @@
 #define playersInMap 0x010F500;
 #define entityBase 0x010F4F8;
 #define viewMatrix 0x501AE8;
+#define widthOffset 0x110C94;
+#define heightOffset 0x110C98;
 
 std::vector<unsigned int> healthOffset = { 0xF8 };
 std::vector<unsigned int> ammoOffset = { 0x374,0x14,0x0 };

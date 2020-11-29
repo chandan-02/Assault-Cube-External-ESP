@@ -17,9 +17,13 @@ void Draw::drawBorderBox(int x, int y, int w, int h, int thickness, HBRUSH brush
 	drawFilledRectangles((x+w), y, thickness, h,brushColor);
 	drawFilledRectangles(x, y+h, w+thickness, thickness,brushColor);
 }
-void Draw::drawEsp(int x, int y, float distance, HBRUSH hBrush, COLORREF colorBol) {
-	int width = 1100 / distance;	
-	int height = 2000 / distance;	
+void Draw::drawEsp(int x, int y, float distance, HBRUSH hBrush, COLORREF colorBol,int widths,int heights) {
+	int w = widths;
+	int h = heights;
+	int newWidth = (37/100  * widths) + w ;
+	int newHeight = (300/100 * heights) + h;
+	int width = newWidth  / distance;
+	int height = newHeight / distance;
 	drawBorderBox(x - (width / 2), y - height, width, height, 1, hBrush);
 }
 
@@ -30,12 +34,12 @@ DWORD WINAPI Draw::esp(Entities listOfEnemy, Player me, MyMaths calc) {
 		listOfEnemy.getInfoEntity();
 
 		for (int i = 1; i < listOfEnemy.amount; i++) {
-			if (calc.worldToScreen(listOfEnemy.list[i].feetPos, me.screen, me.matrix,800,600) && listOfEnemy.list[i].health > 0) {
+			if (calc.worldToScreen(listOfEnemy.list[i].feetPos, me.screen, me.matrix,me.width,me.height) && listOfEnemy.list[i].health > 0 ) {
 				if (listOfEnemy.list[i].team != me.teamC) {
-					Draw::drawEsp(calc.screen.x,calc.screen.y,calc.getDistance3d(me.feetPos,listOfEnemy.list[i].feetPos),Draw::hBrushEnemy, Draw::enemyColor);
+					Draw::drawEsp(calc.screen.x,calc.screen.y,calc.getDistance3d(me.feetPos,listOfEnemy.list[i].feetPos),Draw::hBrushEnemy, Draw::enemyColor,me.width,me.height);
 				}
 				if (listOfEnemy.list[i].team == me.teamC) {
-					Draw::drawEsp(calc.screen.x, calc.screen.y, calc.getDistance3d(me.feetPos, listOfEnemy.list[i].feetPos), Draw::hBrushTeam, Draw::teamColor);
+					Draw::drawEsp(calc.screen.x, calc.screen.y, calc.getDistance3d(me.feetPos, listOfEnemy.list[i].feetPos), Draw::hBrushTeam, Draw::teamColor,me.width, me.height);
 				}
 			}
 		}

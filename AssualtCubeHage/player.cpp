@@ -12,7 +12,9 @@ void Player::getInfoPlayer(){
 	uintptr_t healthAddr = FindDMAAddy(hProc, playerBaseAddr, healthOffset);
 	uintptr_t teamAddr = FindDMAAddy(hProc, playerBaseAddr, team);
 	uintptr_t viewMatrixA =  viewMatrix;
-	
+	uintptr_t heightA = getModuleBase + heightOffset;
+	uintptr_t widthA = getModuleBase + widthOffset;
+
 	uintptr_t x = FindDMAAddy(hProc, playerBaseAddr, posx);
 	uintptr_t y = FindDMAAddy(hProc, playerBaseAddr, posy);
 	uintptr_t z = FindDMAAddy(hProc, playerBaseAddr, posz);
@@ -25,7 +27,10 @@ void Player::getInfoPlayer(){
 	ReadProcessMemory(hProc, (BYTE*)healthAddr, &health, sizeof(health), nullptr);
 	ReadProcessMemory(hProc, (BYTE*)teamAddr, &teamC, sizeof(teamC), nullptr);
 	ReadProcessMemory(hProc, (BYTE*)viewMatrixA, &matrix, sizeof(matrix), nullptr);
-	
+
+	ReadProcessMemory(hProc, (BYTE*)heightA, &height, sizeof(height), nullptr);
+	ReadProcessMemory(hProc, (BYTE*)widthA, &width, sizeof(width), nullptr);
+
 	ReadProcessMemory(hProc, (BYTE*)x, &headPos.x, sizeof(headPos.x), nullptr);
 	ReadProcessMemory(hProc, (BYTE*)y, &headPos.y, sizeof(headPos.y), nullptr);
 	ReadProcessMemory(hProc, (BYTE*)z, &headPos.z, sizeof(headPos.z), nullptr);
@@ -49,4 +54,6 @@ void Player::printDebug() {
 	std::cout << "XNormal : " << feetPos.x << std::endl;
 	std::cout << "YNormal : " << feetPos.y << std::endl;
 	std::cout << "ZNormal : " << feetPos.z << std::endl;
+
+	std::cout << "Current Resolution : " << width << "*" << height << std::endl;
 }

@@ -1,5 +1,4 @@
 #include "mycal.h"
-
 #include <cmath>
 
 bool MyMaths::worldToScreen(vec3d pos, vec3d& screen, float matrix[16], int width, int height) {
